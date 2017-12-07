@@ -19,6 +19,7 @@ class BeerDetailsViewController: UIViewController, DetailsView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "heartNotFilled"), style: .plain, target: self, action: #selector(saveToFavorite))
         self.navigationItem.title = "Beer Details"
         self.preferLargeTitles()
         presenter.viewDidLoad()
@@ -27,9 +28,17 @@ class BeerDetailsViewController: UIViewController, DetailsView {
     func showDetails(forBeer beer: Beer) {
         beerNameLabel.text = beer.name
         beerTaglineLabel.text = beer.tagline
-        beerDescriptionTV.text = beer.description
+        beerDescriptionTV.text = beer.details
         guard let imageURL = beer.imageURL else { return }
         guard let url = URL(string: imageURL) else { return }
         Nuke.loadImage(with: url, into: beerImageView)
+    }
+    
+    @objc func saveToFavorite() {
+        presenter.saveToFavorites()
+    }
+    
+    func favorited(isFavorite: Bool) {
+        self.navigationItem.rightBarButtonItem?.image = isFavorite ? #imageLiteral(resourceName: "heartFilled") : #imageLiteral(resourceName: "heartNotFilled")
     }
 }

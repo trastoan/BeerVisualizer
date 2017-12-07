@@ -8,4 +8,5 @@ target 'ViperLearning' do
   # Pods for ViperLearning
   pod 'Alamofire', '~> 4.5'
   pod 'Nuke'
+  pod 'RealmSwift'
 end

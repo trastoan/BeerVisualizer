@@ -30,7 +30,7 @@ class BeersViewController: UIViewController, BeersViewInterface {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 72.0
+        tableView.estimatedRowHeight = 124.0
         tableView.tableFooterView = UIView()
         tableView.register(BeerCell.self)
         

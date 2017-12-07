@@ -19,15 +19,16 @@ class FavoritesPresenter: FavoritesModuleInterface, FavoritesInteractorOutput {
     }
     
     func viewDidLoad() {
-        //TODO
+        interactor.fetchBeers()
     }
     
     func showDetailsForBeer(beer: Beer) {
-        //TODO
+        router.presentDetailsInterfaceForBeer(beer: beer)
     }
     
     func beersFetched(beers: [Beer]) {
         beerData = beers
+        view?.showBeersData(beers: beerData)
     }
     
     func beersFetchedFailed() {

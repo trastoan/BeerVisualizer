@@ -25,6 +25,8 @@
 		DA8991BA1FD9826700276D44 /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991B91FD9826700276D44 /* FavoritesPresenter.swift */; };
 		DA8991BC1FD9827200276D44 /* FavoritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991BB1FD9827200276D44 /* FavoritesRouter.swift */; };
 		DA8991BE1FD9828200276D44 /* FavoritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991BD1FD9828200276D44 /* FavoritesInteractor.swift */; };
+		DA8991C11FD9AE5300276D44 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991C01FD9AE5300276D44 /* RealmModel.swift */; };
+		DA8991C31FD9B5CD00276D44 /* BeerDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991C21FD9B5CD00276D44 /* BeerDetailsInteractor.swift */; };
 		DACFE4D81FD6D6FA006B7FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4D71FD6D6FA006B7FD3 /* AppDelegate.swift */; };
 		DACFE4DD1FD6D6FA006B7FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACFE4DB1FD6D6FA006B7FD3 /* Main.storyboard */; };
 		DACFE4DF1FD6D6FA006B7FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACFE4DE1FD6D6FA006B7FD3 /* Assets.xcassets */; };
@@ -64,6 +66,8 @@
 		DA8991B91FD9826700276D44 /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
 		DA8991BB1FD9827200276D44 /* FavoritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRouter.swift; sourceTree = "<group>"; };
 		DA8991BD1FD9828200276D44 /* FavoritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInteractor.swift; sourceTree = "<group>"; };
+		DA8991C01FD9AE5300276D44 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		DA8991C21FD9B5CD00276D44 /* BeerDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsInteractor.swift; sourceTree = "<group>"; };
 		DACFE4D41FD6D6FA006B7FD3 /* ViperLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACFE4D71FD6D6FA006B7FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACFE4DC1FD6D6FA006B7FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -158,6 +162,15 @@
 			path = TabController;
 			sourceTree = "<group>";
 		};
+		DA8991BF1FD9AE3300276D44 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DA89919D1FD8761200276D44 /* ViewProtocols.swift */,
+				DA8991C01FD9AE5300276D44 /* RealmModel.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		DACFE4CB1FD6D6F9006B7FD3 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +192,7 @@
 		DACFE4D61FD6D6FA006B7FD3 /* ViperLearning */ = {
 			isa = PBXGroup;
 			children = (
+				DA8991BF1FD9AE3300276D44 /* Protocols */,
 				DA8991A51FD87C2E00276D44 /* Modules */,
 				DA89919A1FD875B900276D44 /* Extensions */,
 				DACFE4FB1FD6ED36006B7FD3 /* Entities */,
@@ -187,7 +201,6 @@
 				DACFE4DE1FD6D6FA006B7FD3 /* Assets.xcassets */,
 				DACFE4E01FD6D6FA006B7FD3 /* LaunchScreen.storyboard */,
 				DACFE4E31FD6D6FA006B7FD3 /* Info.plist */,
-				DA89919D1FD8761200276D44 /* ViewProtocols.swift */,
 			);
 			path = ViperLearning;
 			sourceTree = "<group>";
@@ -212,6 +225,7 @@
 				DACFE4FD1FD70962006B7FD3 /* BeerDetailWireframe.swift */,
 				DACFE5041FD7218E006B7FD3 /* DetailsRouter.swift */,
 				DA8991B31FD889D000276D44 /* DetailsContract.swift */,
+				DA8991C21FD9B5CD00276D44 /* BeerDetailsInteractor.swift */,
 			);
 			path = BeerDetail;
 			sourceTree = "<group>";
@@ -326,11 +340,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ViperLearning/Pods-ViperLearning-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -384,11 +402,13 @@
 				DA8991BA1FD9826700276D44 /* FavoritesPresenter.swift in Sources */,
 				DA8991B21FD8870700276D44 /* NoBeersFetched.swift in Sources */,
 				DACFE4FE1FD70962006B7FD3 /* BeerDetailWireframe.swift in Sources */,
+				DA8991C31FD9B5CD00276D44 /* BeerDetailsInteractor.swift in Sources */,
 				DA8991B61FD9820700276D44 /* FavoriteBeersViewController.swift in Sources */,
 				DACFE4F61FD6E7E3006B7FD3 /* BeerDetailsViewController.swift in Sources */,
 				DACFE4F41FD6E777006B7FD3 /* BeersRouter.swift in Sources */,
 				DACFE4F01FD6DAC6006B7FD3 /* BeerPresenter.swift in Sources */,
 				DACFE5051FD7218E006B7FD3 /* DetailsRouter.swift in Sources */,
+				DA8991C11FD9AE5300276D44 /* RealmModel.swift in Sources */,
 				DACFE4D81FD6D6FA006B7FD3 /* AppDelegate.swift in Sources */,
 				DA89919E1FD8761200276D44 /* ViewProtocols.swift in Sources */,
 				DA8991A21FD876B100276D44 /* ReusableViewExtension.swift in Sources */,

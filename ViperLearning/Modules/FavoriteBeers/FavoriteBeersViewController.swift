@@ -20,7 +20,12 @@ class FavoriteBeersViewController: UIViewController, FavoritesViewInterface {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        presenter.viewDidLoad()
     }
     
     func setupView() {

@@ -11,7 +11,11 @@ class FavoritesInteractor: FavoritesUseCase {
     var output: FavoritesInteractorOutput!
     
     func fetchBeers() {
-        //DO the fetch on realm
+        guard let beers = Beer.all() else {
+            output.beersFetchedFailed()
+            return
+        }
+        output.beersFetched(beers: beers)
     }
     
 }

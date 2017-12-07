@@ -7,19 +7,69 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Beer: Decodable {
-    var name: String?
-    var id: Int?
-    var tagline: String?
-    var description: String?
-    var imageURL: String?
+final class Beer: Object, Decodable {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var name: String?
+    @objc dynamic var tagline: String?
+    @objc dynamic var details: String?
+    @objc dynamic var imageURL: String?
     
     enum CodingKeys: String, CodingKey {
         case imageURL = "image_url"
         case name
         case id
         case tagline
-        case description
+        case details = "description"
+    }
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+}
+
+//Realm interactions
+extension Beer : RealModel {
+    func save() -> Error? {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(self)
+            }
+            return nil
+        } catch let error {
+            return error
+        }
+    }
+    
+    func delete() -> Error? {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.delete(self)
+            }
+            return nil
+        } catch let error {
+            return error
+        }
+    }
+    
+    static func all() -> [Beer]? {
+        do {
+            let realm = try Realm()
+            return Array(realm.objects(self))
+        } catch {
+            return nil
+        }
+    }
+    
+    static func find(with id: Int) -> Beer? {
+        do {
+            let realm = try Realm()
+            return realm.object(ofType: self, forPrimaryKey: id)
+        } catch {
+            return nil
+        }
     }
 }
