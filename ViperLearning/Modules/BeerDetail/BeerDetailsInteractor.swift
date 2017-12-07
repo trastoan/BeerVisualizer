@@ -12,11 +12,11 @@ class BeerDetailsInteractor: DetailsUseCase {
     
     func saveToFavorites(beer: Beer) {
         var result = false
-        
-        if let fetchedBeer = Beer.find(with: beer.id) {
+        let favoriteBeer = beer.copy() as! Beer
+        if let fetchedBeer = Beer.find(with: favoriteBeer.id) {
             result = fetchedBeer.delete() == nil ? false : true
         } else {
-            result = beer.save() == nil ? true : false
+            result = favoriteBeer.save() == nil ? true : false
         }
         output.favorited(isFavorite: result)
     }

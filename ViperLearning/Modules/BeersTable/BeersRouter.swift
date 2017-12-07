@@ -12,7 +12,7 @@ class BeersRouter: BeersWireframeInput {
     var view: UIViewController?
     
     static func assembleModule() -> UIViewController {
-        let viewController: BeersViewController = BeersViewController.instatiate(fromStoryboard: "Main")
+        let viewController: BeersViewController = BeersViewController()
         let presenter = BeersPresenter()
         let interactor = BeerInteractor()
         let router = BeersRouter()

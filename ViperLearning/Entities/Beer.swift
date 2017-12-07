@@ -9,7 +9,8 @@
 import Foundation
 import RealmSwift
 
-final class Beer: Object, Decodable {
+final class Beer: Object, Decodable, NSCopying {
+    
     @objc dynamic var id: Int = 0
     @objc dynamic var name: String?
     @objc dynamic var tagline: String?
@@ -26,6 +27,17 @@ final class Beer: Object, Decodable {
     
     override static func primaryKey() -> String? {
         return "id"
+    }
+    
+    func copy(with zone: NSZone? = nil) -> Any {
+        let copy = Beer()
+        copy.id = self.id
+        copy.name = self.name
+        copy.tagline = self.tagline
+        copy.details = self.details
+        copy.imageURL = self.imageURL
+        
+        return copy
     }
 }
 

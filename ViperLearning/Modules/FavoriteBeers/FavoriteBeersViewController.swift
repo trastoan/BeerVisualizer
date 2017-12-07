@@ -10,7 +10,7 @@ import UIKit
 
 class FavoriteBeersViewController: UIViewController, FavoritesViewInterface {
 
-    @IBOutlet weak var tableView: UITableView!
+    var tableView: UITableView!
     var presenter: FavoritesPresenter!
     var beersData: [Beer] = [Beer]() {
         didSet {
@@ -20,6 +20,7 @@ class FavoriteBeersViewController: UIViewController, FavoritesViewInterface {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView = TableCreator.createTable(onView: self.view)
         setupView()
         // Do any additional setup after loading the view.
     }

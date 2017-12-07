@@ -11,8 +11,8 @@ import UIKit
 class FavoritesRouter: FavoritesWireframe {
     var view: UIViewController?
     
-    static func assmbleModule() -> UIViewController {
-        let viewController: FavoriteBeersViewController = FavoriteBeersViewController.instatiate(fromStoryboard: "Main")
+    static func assembleModule() -> UIViewController {
+        let viewController: FavoriteBeersViewController = FavoriteBeersViewController()
         
         let presenter = FavoritesPresenter()
         let interactor = FavoritesInteractor()

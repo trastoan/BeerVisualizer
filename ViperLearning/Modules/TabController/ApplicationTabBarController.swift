@@ -13,7 +13,7 @@ class ApplicationTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let beersController = BeersRouter.assembleModule()
-        let favoriteBeers = FavoritesRouter.assmbleModule()
+        let favoriteBeers = FavoritesRouter.assembleModule()
         
         let tabBarControllers = [beersController, favoriteBeers]
         
@@ -22,10 +22,4 @@ class ApplicationTabBarController: UITabBarController {
         favoriteBeers.tabBarItem = UITabBarItem(title: "Favorites", image: #imageLiteral(resourceName: "favoriteBeers"), tag: 2)
         beersController.tabBarItem = UITabBarItem(title: "Beers", image: #imageLiteral(resourceName: "beersTab"), tag: 1)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }

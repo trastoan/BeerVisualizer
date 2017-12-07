@@ -10,7 +10,7 @@ import UIKit
 
 class BeersViewController: UIViewController, BeersViewInterface {
 
-    @IBOutlet weak var tableView: UITableView!
+    var tableView: UITableView!
     var presenter: BeersPresenter!
     var beersData = [Beer]() {
         didSet {
@@ -22,6 +22,7 @@ class BeersViewController: UIViewController, BeersViewInterface {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView = TableCreator.createTable(onView: self.view)
         setupView()
         presenter.updateView()
     }

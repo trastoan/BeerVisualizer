@@ -10,7 +10,7 @@ import UIKit
 
 class DetailsRouter : DetailsWireframe {
     static func assembleModule(_ beer: Beer) -> UIViewController {
-        let view: BeerDetailsViewController = BeerDetailsViewController.instatiate(fromStoryboard: "Main")
+        let view: BeerDetailsViewController = BeerDetailsViewController()
         let presenter = BeerDetailsPresenter()
         let interactor = BeerDetailsInteractor()
         

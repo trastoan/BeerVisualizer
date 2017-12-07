@@ -21,7 +21,7 @@ protocol FavoritesViewInterface: class {
 protocol FavoritesWireframe {
     weak var view: UIViewController? { get set }
     func presentDetailsInterfaceForBeer(beer: Beer)
-    static func assmbleModule() -> UIViewController
+    static func assembleModule() -> UIViewController
 }
 //Interactor contract
 protocol FavoritesInteractorInput: class {

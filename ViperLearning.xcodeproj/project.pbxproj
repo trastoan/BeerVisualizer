@@ -27,8 +27,12 @@
 		DA8991BE1FD9828200276D44 /* FavoritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991BD1FD9828200276D44 /* FavoritesInteractor.swift */; };
 		DA8991C11FD9AE5300276D44 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991C01FD9AE5300276D44 /* RealmModel.swift */; };
 		DA8991C31FD9B5CD00276D44 /* BeerDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991C21FD9B5CD00276D44 /* BeerDetailsInteractor.swift */; };
+		DA8991C71FD9DB2400276D44 /* TableCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991C61FD9DB2400276D44 /* TableCreator.swift */; };
+		DA8991E81FD9E0FD00276D44 /* HeaderDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8991E71FD9E0FD00276D44 /* HeaderDetailsTableViewCell.xib */; };
+		DA8991EA1FD9E22900276D44 /* HeaderDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991E91FD9E22900276D44 /* HeaderDetailsTableViewCell.swift */; };
+		DA8991EC1FD9E5D500276D44 /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8991EB1FD9E5D500276D44 /* DescriptionTableViewCell.xib */; };
+		DA8991EE1FD9E63C00276D44 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991ED1FD9E63C00276D44 /* DescriptionTableViewCell.swift */; };
 		DACFE4D81FD6D6FA006B7FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4D71FD6D6FA006B7FD3 /* AppDelegate.swift */; };
-		DACFE4DD1FD6D6FA006B7FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACFE4DB1FD6D6FA006B7FD3 /* Main.storyboard */; };
 		DACFE4DF1FD6D6FA006B7FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACFE4DE1FD6D6FA006B7FD3 /* Assets.xcassets */; };
 		DACFE4E21FD6D6FA006B7FD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACFE4E01FD6D6FA006B7FD3 /* LaunchScreen.storyboard */; };
 		DACFE4EA1FD6D867006B7FD3 /* BeerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4E91FD6D867006B7FD3 /* BeerCell.swift */; };
@@ -68,9 +72,13 @@
 		DA8991BD1FD9828200276D44 /* FavoritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInteractor.swift; sourceTree = "<group>"; };
 		DA8991C01FD9AE5300276D44 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		DA8991C21FD9B5CD00276D44 /* BeerDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsInteractor.swift; sourceTree = "<group>"; };
+		DA8991C61FD9DB2400276D44 /* TableCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCreator.swift; sourceTree = "<group>"; };
+		DA8991E71FD9E0FD00276D44 /* HeaderDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		DA8991E91FD9E22900276D44 /* HeaderDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		DA8991EB1FD9E5D500276D44 /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		DA8991ED1FD9E63C00276D44 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		DACFE4D41FD6D6FA006B7FD3 /* ViperLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACFE4D71FD6D6FA006B7FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DACFE4DC1FD6D6FA006B7FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DACFE4DE1FD6D6FA006B7FD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DACFE4E11FD6D6FA006B7FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DACFE4E31FD6D6FA006B7FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -171,6 +179,18 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		DA8991E61FD9E0E700276D44 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DACFE4F51FD6E7E3006B7FD3 /* BeerDetailsViewController.swift */,
+				DA8991E71FD9E0FD00276D44 /* HeaderDetailsTableViewCell.xib */,
+				DA8991E91FD9E22900276D44 /* HeaderDetailsTableViewCell.swift */,
+				DA8991EB1FD9E5D500276D44 /* DescriptionTableViewCell.xib */,
+				DA8991ED1FD9E63C00276D44 /* DescriptionTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DACFE4CB1FD6D6F9006B7FD3 = {
 			isa = PBXGroup;
 			children = (
@@ -197,10 +217,10 @@
 				DA89919A1FD875B900276D44 /* Extensions */,
 				DACFE4FB1FD6ED36006B7FD3 /* Entities */,
 				DACFE4D71FD6D6FA006B7FD3 /* AppDelegate.swift */,
-				DACFE4DB1FD6D6FA006B7FD3 /* Main.storyboard */,
 				DACFE4DE1FD6D6FA006B7FD3 /* Assets.xcassets */,
 				DACFE4E01FD6D6FA006B7FD3 /* LaunchScreen.storyboard */,
 				DACFE4E31FD6D6FA006B7FD3 /* Info.plist */,
+				DA8991C61FD9DB2400276D44 /* TableCreator.swift */,
 			);
 			path = ViperLearning;
 			sourceTree = "<group>";
@@ -220,8 +240,8 @@
 		DACFE4FA1FD6ED27006B7FD3 /* BeerDetail */ = {
 			isa = PBXGroup;
 			children = (
+				DA8991E61FD9E0E700276D44 /* Views */,
 				DACFE4F71FD6E8AE006B7FD3 /* BeerDetailsPresenter.swift */,
-				DACFE4F51FD6E7E3006B7FD3 /* BeerDetailsViewController.swift */,
 				DACFE4FD1FD70962006B7FD3 /* BeerDetailWireframe.swift */,
 				DACFE5041FD7218E006B7FD3 /* DetailsRouter.swift */,
 				DA8991B31FD889D000276D44 /* DetailsContract.swift */,
@@ -323,8 +343,9 @@
 				DA8991991FD873E400276D44 /* BeerCell.xib in Resources */,
 				DA8991B01FD8859A00276D44 /* View.xib in Resources */,
 				DACFE4E21FD6D6FA006B7FD3 /* LaunchScreen.storyboard in Resources */,
+				DA8991E81FD9E0FD00276D44 /* HeaderDetailsTableViewCell.xib in Resources */,
 				DACFE4DF1FD6D6FA006B7FD3 /* Assets.xcassets in Resources */,
-				DACFE4DD1FD6D6FA006B7FD3 /* Main.storyboard in Resources */,
+				DA8991EC1FD9E5D500276D44 /* DescriptionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,8 +429,10 @@
 				DACFE4F41FD6E777006B7FD3 /* BeersRouter.swift in Sources */,
 				DACFE4F01FD6DAC6006B7FD3 /* BeerPresenter.swift in Sources */,
 				DACFE5051FD7218E006B7FD3 /* DetailsRouter.swift in Sources */,
+				DA8991EE1FD9E63C00276D44 /* DescriptionTableViewCell.swift in Sources */,
 				DA8991C11FD9AE5300276D44 /* RealmModel.swift in Sources */,
 				DACFE4D81FD6D6FA006B7FD3 /* AppDelegate.swift in Sources */,
+				DA8991C71FD9DB2400276D44 /* TableCreator.swift in Sources */,
 				DA89919E1FD8761200276D44 /* ViewProtocols.swift in Sources */,
 				DA8991A21FD876B100276D44 /* ReusableViewExtension.swift in Sources */,
 				DA8991B81FD9825B00276D44 /* FavoritesContract.swift in Sources */,
@@ -420,6 +443,7 @@
 				DACFE5031FD71A8F006B7FD3 /* UIViewControllerExtension.swift in Sources */,
 				DACFE4F81FD6E8AE006B7FD3 /* BeerDetailsPresenter.swift in Sources */,
 				DACFE4EE1FD6D9C5006B7FD3 /* Beer.swift in Sources */,
+				DA8991EA1FD9E22900276D44 /* HeaderDetailsTableViewCell.swift in Sources */,
 				DACFE4F21FD6DD82006B7FD3 /* BeerInteractor.swift in Sources */,
 				DA8991AB1FD87D3B00276D44 /* RootRouter.swift in Sources */,
 				DA8991A81FD87C6F00276D44 /* RootContract.swift in Sources */,
@@ -431,14 +455,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DACFE4DB1FD6D6FA006B7FD3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DACFE4DC1FD6D6FA006B7FD3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DACFE4E01FD6D6FA006B7FD3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
