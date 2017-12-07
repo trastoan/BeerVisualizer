@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43A228D220803D33885ED7D0 /* Pods_ViperLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3D4D9D6CE06DD57B0AD14E /* Pods_ViperLearning.framework */; };
+		DA8991991FD873E400276D44 /* BeerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8991981FD873E400276D44 /* BeerCell.xib */; };
+		DA89919C1FD875D400276D44 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA89919B1FD875D400276D44 /* UITableViewExtension.swift */; };
+		DA89919E1FD8761200276D44 /* ViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA89919D1FD8761200276D44 /* ViewProtocols.swift */; };
+		DA8991A01FD8766500276D44 /* NibLoadableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA89919F1FD8766500276D44 /* NibLoadableViewExtension.swift */; };
+		DA8991A21FD876B100276D44 /* ReusableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991A11FD876B100276D44 /* ReusableViewExtension.swift */; };
+		DA8991A41FD87B1400276D44 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991A31FD87B1400276D44 /* UITableViewCell.swift */; };
+		DA8991A81FD87C6F00276D44 /* RootContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991A71FD87C6F00276D44 /* RootContract.swift */; };
+		DA8991AB1FD87D3B00276D44 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991AA1FD87D3B00276D44 /* RootRouter.swift */; };
+		DA8991AE1FD87E1600276D44 /* ApplicationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991AD1FD87E1600276D44 /* ApplicationTabBarController.swift */; };
+		DA8991B01FD8859A00276D44 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8991AF1FD8859A00276D44 /* View.xib */; };
+		DA8991B21FD8870700276D44 /* NoBeersFetched.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991B11FD8870700276D44 /* NoBeersFetched.swift */; };
+		DA8991B41FD889D000276D44 /* DetailsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991B31FD889D000276D44 /* DetailsContract.swift */; };
+		DACFE4D81FD6D6FA006B7FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4D71FD6D6FA006B7FD3 /* AppDelegate.swift */; };
+		DACFE4DD1FD6D6FA006B7FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACFE4DB1FD6D6FA006B7FD3 /* Main.storyboard */; };
+		DACFE4DF1FD6D6FA006B7FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACFE4DE1FD6D6FA006B7FD3 /* Assets.xcassets */; };
+		DACFE4E21FD6D6FA006B7FD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACFE4E01FD6D6FA006B7FD3 /* LaunchScreen.storyboard */; };
+		DACFE4EA1FD6D867006B7FD3 /* BeerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4E91FD6D867006B7FD3 /* BeerCell.swift */; };
+		DACFE4EC1FD6D988006B7FD3 /* BeersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4EB1FD6D988006B7FD3 /* BeersViewController.swift */; };
+		DACFE4EE1FD6D9C5006B7FD3 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4ED1FD6D9C5006B7FD3 /* Beer.swift */; };
+		DACFE4F01FD6DAC6006B7FD3 /* BeerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4EF1FD6DAC6006B7FD3 /* BeerPresenter.swift */; };
+		DACFE4F21FD6DD82006B7FD3 /* BeerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4F11FD6DD82006B7FD3 /* BeerInteractor.swift */; };
+		DACFE4F41FD6E777006B7FD3 /* BeersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4F31FD6E777006B7FD3 /* BeersRouter.swift */; };
+		DACFE4F61FD6E7E3006B7FD3 /* BeerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4F51FD6E7E3006B7FD3 /* BeerDetailsViewController.swift */; };
+		DACFE4F81FD6E8AE006B7FD3 /* BeerDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4F71FD6E8AE006B7FD3 /* BeerDetailsPresenter.swift */; };
+		DACFE4FE1FD70962006B7FD3 /* BeerDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4FD1FD70962006B7FD3 /* BeerDetailWireframe.swift */; };
+		DACFE5001FD70AF7006B7FD3 /* BeerTableContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4FF1FD70AF7006B7FD3 /* BeerTableContract.swift */; };
+		DACFE5031FD71A8F006B7FD3 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE5021FD71A8F006B7FD3 /* UIViewControllerExtension.swift */; };
+		DACFE5051FD7218E006B7FD3 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE5041FD7218E006B7FD3 /* DetailsRouter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		57C0BAF981E286941F3A047D /* Pods-ViperLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperLearning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViperLearning/Pods-ViperLearning.debug.xcconfig"; sourceTree = "<group>"; };
+		5C3D4D9D6CE06DD57B0AD14E /* Pods_ViperLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8523BD54F7D742CDA9586A75 /* Pods-ViperLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperLearning.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViperLearning/Pods-ViperLearning.release.xcconfig"; sourceTree = "<group>"; };
+		DA8991981FD873E400276D44 /* BeerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCell.xib; sourceTree = "<group>"; };
+		DA89919B1FD875D400276D44 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		DA89919D1FD8761200276D44 /* ViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocols.swift; sourceTree = "<group>"; };
+		DA89919F1FD8766500276D44 /* NibLoadableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableViewExtension.swift; sourceTree = "<group>"; };
+		DA8991A11FD876B100276D44 /* ReusableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewExtension.swift; sourceTree = "<group>"; };
+		DA8991A31FD87B1400276D44 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		DA8991A71FD87C6F00276D44 /* RootContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContract.swift; sourceTree = "<group>"; };
+		DA8991AA1FD87D3B00276D44 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		DA8991AD1FD87E1600276D44 /* ApplicationTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationTabBarController.swift; sourceTree = "<group>"; };
+		DA8991AF1FD8859A00276D44 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		DA8991B11FD8870700276D44 /* NoBeersFetched.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBeersFetched.swift; sourceTree = "<group>"; };
+		DA8991B31FD889D000276D44 /* DetailsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsContract.swift; sourceTree = "<group>"; };
+		DACFE4D41FD6D6FA006B7FD3 /* ViperLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACFE4D71FD6D6FA006B7FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DACFE4DC1FD6D6FA006B7FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DACFE4DE1FD6D6FA006B7FD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DACFE4E11FD6D6FA006B7FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DACFE4E31FD6D6FA006B7FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DACFE4E91FD6D867006B7FD3 /* BeerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerCell.swift; sourceTree = "<group>"; };
+		DACFE4EB1FD6D988006B7FD3 /* BeersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersViewController.swift; sourceTree = "<group>"; };
+		DACFE4ED1FD6D9C5006B7FD3 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		DACFE4EF1FD6DAC6006B7FD3 /* BeerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerPresenter.swift; sourceTree = "<group>"; };
+		DACFE4F11FD6DD82006B7FD3 /* BeerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerInteractor.swift; sourceTree = "<group>"; };
+		DACFE4F31FD6E777006B7FD3 /* BeersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersRouter.swift; sourceTree = "<group>"; };
+		DACFE4F51FD6E7E3006B7FD3 /* BeerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsViewController.swift; sourceTree = "<group>"; };
+		DACFE4F71FD6E8AE006B7FD3 /* BeerDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsPresenter.swift; sourceTree = "<group>"; };
+		DACFE4FD1FD70962006B7FD3 /* BeerDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailWireframe.swift; sourceTree = "<group>"; };
+		DACFE4FF1FD70AF7006B7FD3 /* BeerTableContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableContract.swift; sourceTree = "<group>"; };
+		DACFE5021FD71A8F006B7FD3 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		DACFE5041FD7218E006B7FD3 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DACFE4D11FD6D6FA006B7FD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43A228D220803D33885ED7D0 /* Pods_ViperLearning.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B58A06D8AA742D87EF5F4318 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57C0BAF981E286941F3A047D /* Pods-ViperLearning.debug.xcconfig */,
+				8523BD54F7D742CDA9586A75 /* Pods-ViperLearning.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA89919A1FD875B900276D44 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DACFE5021FD71A8F006B7FD3 /* UIViewControllerExtension.swift */,
+				DA89919B1FD875D400276D44 /* UITableViewExtension.swift */,
+				DA89919F1FD8766500276D44 /* NibLoadableViewExtension.swift */,
+				DA8991A11FD876B100276D44 /* ReusableViewExtension.swift */,
+				DA8991A31FD87B1400276D44 /* UITableViewCell.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DA8991A51FD87C2E00276D44 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DA8991AC1FD87DE400276D44 /* TabController */,
+				DA8991A91FD87D2600276D44 /* FavoriteBeers */,
+				DA8991A61FD87C5A00276D44 /* Root */,
+				DACFE4FA1FD6ED27006B7FD3 /* BeerDetail */,
+				DACFE4F91FD6ED19006B7FD3 /* BeersTable */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DA8991A61FD87C5A00276D44 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				DA8991A71FD87C6F00276D44 /* RootContract.swift */,
+				DA8991AA1FD87D3B00276D44 /* RootRouter.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		DA8991A91FD87D2600276D44 /* FavoriteBeers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FavoriteBeers;
+			sourceTree = "<group>";
+		};
+		DA8991AC1FD87DE400276D44 /* TabController */ = {
+			isa = PBXGroup;
+			children = (
+				DA8991AD1FD87E1600276D44 /* ApplicationTabBarController.swift */,
+			);
+			path = TabController;
+			sourceTree = "<group>";
+		};
+		DACFE4CB1FD6D6F9006B7FD3 = {
+			isa = PBXGroup;
+			children = (
+				DACFE4D61FD6D6FA006B7FD3 /* ViperLearning */,
+				DACFE4D51FD6D6FA006B7FD3 /* Products */,
+				B58A06D8AA742D87EF5F4318 /* Pods */,
+				F8DE07DCB1C9929FB91C0B48 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DACFE4D51FD6D6FA006B7FD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DACFE4D41FD6D6FA006B7FD3 /* ViperLearning.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DACFE4D61FD6D6FA006B7FD3 /* ViperLearning */ = {
+			isa = PBXGroup;
+			children = (
+				DA8991A51FD87C2E00276D44 /* Modules */,
+				DA89919A1FD875B900276D44 /* Extensions */,
+				DACFE4FB1FD6ED36006B7FD3 /* Entities */,
+				DACFE4D71FD6D6FA006B7FD3 /* AppDelegate.swift */,
+				DACFE4DB1FD6D6FA006B7FD3 /* Main.storyboard */,
+				DACFE4DE1FD6D6FA006B7FD3 /* Assets.xcassets */,
+				DACFE4E01FD6D6FA006B7FD3 /* LaunchScreen.storyboard */,
+				DACFE4E31FD6D6FA006B7FD3 /* Info.plist */,
+				DA89919D1FD8761200276D44 /* ViewProtocols.swift */,
+			);
+			path = ViperLearning;
+			sourceTree = "<group>";
+		};
+		DACFE4F91FD6ED19006B7FD3 /* BeersTable */ = {
+			isa = PBXGroup;
+			children = (
+				DACFE5011FD70C0F006B7FD3 /* View */,
+				DACFE4F11FD6DD82006B7FD3 /* BeerInteractor.swift */,
+				DACFE4F31FD6E777006B7FD3 /* BeersRouter.swift */,
+				DACFE4EF1FD6DAC6006B7FD3 /* BeerPresenter.swift */,
+				DACFE4FF1FD70AF7006B7FD3 /* BeerTableContract.swift */,
+			);
+			path = BeersTable;
+			sourceTree = "<group>";
+		};
+		DACFE4FA1FD6ED27006B7FD3 /* BeerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DACFE4F71FD6E8AE006B7FD3 /* BeerDetailsPresenter.swift */,
+				DACFE4F51FD6E7E3006B7FD3 /* BeerDetailsViewController.swift */,
+				DACFE4FD1FD70962006B7FD3 /* BeerDetailWireframe.swift */,
+				DACFE5041FD7218E006B7FD3 /* DetailsRouter.swift */,
+				DA8991B31FD889D000276D44 /* DetailsContract.swift */,
+			);
+			path = BeerDetail;
+			sourceTree = "<group>";
+		};
+		DACFE4FB1FD6ED36006B7FD3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DACFE4ED1FD6D9C5006B7FD3 /* Beer.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DACFE5011FD70C0F006B7FD3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DACFE4E91FD6D867006B7FD3 /* BeerCell.swift */,
+				DACFE4EB1FD6D988006B7FD3 /* BeersViewController.swift */,
+				DA8991981FD873E400276D44 /* BeerCell.xib */,
+				DA8991AF1FD8859A00276D44 /* View.xib */,
+				DA8991B11FD8870700276D44 /* NoBeersFetched.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8DE07DCB1C9929FB91C0B48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C3D4D9D6CE06DD57B0AD14E /* Pods_ViperLearning.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DACFE4D31FD6D6FA006B7FD3 /* ViperLearning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DACFE4E61FD6D6FA006B7FD3 /* Build configuration list for PBXNativeTarget "ViperLearning" */;
+			buildPhases = (
+				26977520DE24C38ECDB3480C /* [CP] Check Pods Manifest.lock */,
+				DACFE4D01FD6D6FA006B7FD3 /* Sources */,
+				DACFE4D11FD6D6FA006B7FD3 /* Frameworks */,
+				DACFE4D21FD6D6FA006B7FD3 /* Resources */,
+				15C83E99BBDECF5F44EC36B1 /* [CP] Embed Pods Frameworks */,
+				76E08714F745573C39ACA1AA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ViperLearning;
+			productName = ViperLearning;
+			productReference = DACFE4D41FD6D6FA006B7FD3 /* ViperLearning.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DACFE4CC1FD6D6F9006B7FD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = ExpressU;
+				TargetAttributes = {
+					DACFE4D31FD6D6FA006B7FD3 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DACFE4CF1FD6D6F9006B7FD3 /* Build configuration list for PBXProject "ViperLearning" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DACFE4CB1FD6D6F9006B7FD3;
+			productRefGroup = DACFE4D51FD6D6FA006B7FD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DACFE4D31FD6D6FA006B7FD3 /* ViperLearning */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DACFE4D21FD6D6FA006B7FD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA8991991FD873E400276D44 /* BeerCell.xib in Resources */,
+				DA8991B01FD8859A00276D44 /* View.xib in Resources */,
+				DACFE4E21FD6D6FA006B7FD3 /* LaunchScreen.storyboard in Resources */,
+				DACFE4DF1FD6D6FA006B7FD3 /* Assets.xcassets in Resources */,
+				DACFE4DD1FD6D6FA006B7FD3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15C83E99BBDECF5F44EC36B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ViperLearning/Pods-ViperLearning-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViperLearning/Pods-ViperLearning-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26977520DE24C38ECDB3480C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ViperLearning-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76E08714F745573C39ACA1AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViperLearning/Pods-ViperLearning-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DACFE4D01FD6D6FA006B7FD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA8991AE1FD87E1600276D44 /* ApplicationTabBarController.swift in Sources */,
+				DACFE4EC1FD6D988006B7FD3 /* BeersViewController.swift in Sources */,
+				DA8991B21FD8870700276D44 /* NoBeersFetched.swift in Sources */,
+				DACFE4FE1FD70962006B7FD3 /* BeerDetailWireframe.swift in Sources */,
+				DACFE4F61FD6E7E3006B7FD3 /* BeerDetailsViewController.swift in Sources */,
+				DACFE4F41FD6E777006B7FD3 /* BeersRouter.swift in Sources */,
+				DACFE4F01FD6DAC6006B7FD3 /* BeerPresenter.swift in Sources */,
+				DACFE5051FD7218E006B7FD3 /* DetailsRouter.swift in Sources */,
+				DACFE4D81FD6D6FA006B7FD3 /* AppDelegate.swift in Sources */,
+				DA89919E1FD8761200276D44 /* ViewProtocols.swift in Sources */,
+				DA8991A21FD876B100276D44 /* ReusableViewExtension.swift in Sources */,
+				DA8991A41FD87B1400276D44 /* UITableViewCell.swift in Sources */,
+				DACFE4EA1FD6D867006B7FD3 /* BeerCell.swift in Sources */,
+				DA8991B41FD889D000276D44 /* DetailsContract.swift in Sources */,
+				DACFE5001FD70AF7006B7FD3 /* BeerTableContract.swift in Sources */,
+				DACFE5031FD71A8F006B7FD3 /* UIViewControllerExtension.swift in Sources */,
+				DACFE4F81FD6E8AE006B7FD3 /* BeerDetailsPresenter.swift in Sources */,
+				DACFE4EE1FD6D9C5006B7FD3 /* Beer.swift in Sources */,
+				DACFE4F21FD6DD82006B7FD3 /* BeerInteractor.swift in Sources */,
+				DA8991AB1FD87D3B00276D44 /* RootRouter.swift in Sources */,
+				DA8991A81FD87C6F00276D44 /* RootContract.swift in Sources */,
+				DA8991A01FD8766500276D44 /* NibLoadableViewExtension.swift in Sources */,
+				DA89919C1FD875D400276D44 /* UITableViewExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DACFE4DB1FD6D6FA006B7FD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DACFE4DC1FD6D6FA006B7FD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DACFE4E01FD6D6FA006B7FD3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DACFE4E11FD6D6FA006B7FD3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DACFE4E41FD6D6FA006B7FD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DACFE4E51FD6D6FA006B7FD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DACFE4E71FD6D6FA006B7FD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57C0BAF981E286941F3A047D /* Pods-ViperLearning.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 489VWS49NR;
+				INFOPLIST_FILE = ViperLearning/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ExpressU.ViperLearning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DACFE4E81FD6D6FA006B7FD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8523BD54F7D742CDA9586A75 /* Pods-ViperLearning.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 489VWS49NR;
+				INFOPLIST_FILE = ViperLearning/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ExpressU.ViperLearning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DACFE4CF1FD6D6F9006B7FD3 /* Build configuration list for PBXProject "ViperLearning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DACFE4E41FD6D6FA006B7FD3 /* Debug */,
+				DACFE4E51FD6D6FA006B7FD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DACFE4E61FD6D6FA006B7FD3 /* Build configuration list for PBXNativeTarget "ViperLearning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DACFE4E71FD6D6FA006B7FD3 /* Debug */,
+				DACFE4E81FD6D6FA006B7FD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DACFE4CC1FD6D6F9006B7FD3 /* Project object */;
+}

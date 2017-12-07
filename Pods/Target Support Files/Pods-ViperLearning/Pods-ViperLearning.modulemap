@@ -1,0 +1,6 @@
+framework module Pods_ViperLearning {
+  umbrella header "Pods-ViperLearning-umbrella.h"
+
+  export *
+  module * { export * }
+}
