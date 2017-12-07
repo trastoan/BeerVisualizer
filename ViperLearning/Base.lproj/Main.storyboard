@@ -103,6 +103,36 @@
             </objects>
             <point key="canvasLocation" x="1132" y="135.38230884557723"/>
         </scene>
+        <!--Favorite Beers View Controller-->
+        <scene sceneID="7L2-Nz-caO">
+            <objects>
+                <viewController storyboardIdentifier="FavoriteBeersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TOK-OM-BxV" customClass="FavoriteBeersViewController" customModule="ViperLearning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sF9-bC-W2t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="buc-NN-RHo">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="buc-NN-RHo" firstAttribute="top" secondItem="dJQ-6N-usW" secondAttribute="top" id="2Pf-Za-xTZ"/>
+                            <constraint firstItem="dJQ-6N-usW" firstAttribute="bottom" secondItem="buc-NN-RHo" secondAttribute="bottom" id="7RO-uV-r7d"/>
+                            <constraint firstItem="dJQ-6N-usW" firstAttribute="trailing" secondItem="buc-NN-RHo" secondAttribute="trailing" id="99h-jR-ghM"/>
+                            <constraint firstItem="buc-NN-RHo" firstAttribute="leading" secondItem="dJQ-6N-usW" secondAttribute="leading" id="GqS-Jd-6EE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dJQ-6N-usW"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="buc-NN-RHo" id="9Ct-6i-4wl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0W4-5b-9Tu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="136"/>
+        </scene>
     </scenes>
     <resources>
         <image name="194" width="271" height="1058"/>

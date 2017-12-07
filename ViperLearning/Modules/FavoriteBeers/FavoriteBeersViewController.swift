@@ -1,53 +1,51 @@
 //
-//  BeersViewController.swift
+//  FavoriteBeersViewController.swift
 //  ViperLearning
 //
-//  Created by Yuri Saboia Felix Frota on 05/12/17.
+//  Created by Yuri Saboia Felix Frota on 07/12/17.
 //  Copyright © 2017 ExpressU. All rights reserved.
 //
 
 import UIKit
 
-class BeersViewController: UIViewController, BeersViewInterface {
+class FavoriteBeersViewController: UIViewController, FavoritesViewInterface {
 
     @IBOutlet weak var tableView: UITableView!
-    var presenter: BeersPresenter!
-    var beersData = [Beer]() {
+    var presenter: FavoritesPresenter!
+    var beersData: [Beer] = [Beer]() {
         didSet {
             tableView.reloadData()
         }
     }
-    var pageNumber = 1
-    var isDataLoading = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
-        presenter.updateView()
+        // Do any additional setup after loading the view.
     }
     
-    fileprivate func setupView() {
+    func setupView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView  = UIView()
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 72.0
-        tableView.tableFooterView = UIView()
+        tableView.estimatedRowHeight = 124.0
         tableView.register(BeerCell.self)
         
-        self.navigationItem.title = "Beers"
+        self.navigationItem.title = "Favorite Beers"
         self.preferLargeTitles()
     }
-
+    
     func showBeersData(beers: [Beer]) {
         beersData = beers
     }
     
     func showEmptyState() {
-        //Show empty screen
+        //TODO
     }
+    
 }
 
-extension BeersViewController: UITableViewDelegate, UITableViewDataSource {
+extension FavoriteBeersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return beersData.count
     }
@@ -63,8 +61,4 @@ extension BeersViewController: UITableViewDelegate, UITableViewDataSource {
         presenter.showDetailsForBeer(beer: beersData[indexPath.row])
     }
     
-//    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-//        pageNumber += 1
-//        presenter.getMoreBeers(page: pageNumber)
-//    }
 }

@@ -1,24 +1,26 @@
 //
-//  BeersRouter.swift
+//  FavoritesRouter.swift
 //  ViperLearning
 //
-//  Created by Yuri Saboia Felix Frota on 05/12/17.
+//  Created by Yuri Saboia Felix Frota on 07/12/17.
 //  Copyright © 2017 ExpressU. All rights reserved.
 //
 
 import UIKit
 
-class BeersRouter: BeersWireframeInput {
+class FavoritesRouter: FavoritesWireframe {
     var view: UIViewController?
     
-    static func assembleModule() -> UIViewController {
-        let viewController: BeersViewController = BeersViewController.instatiate(fromStoryboard: "Main")
-        let presenter = BeersPresenter()
-        let interactor = BeerInteractor()
-        let router = BeersRouter()
+    static func assmbleModule() -> UIViewController {
+        let viewController: FavoriteBeersViewController = FavoriteBeersViewController.instatiate(fromStoryboard: "Main")
+        
+        let presenter = FavoritesPresenter()
+        let interactor = FavoritesInteractor()
+        let router = FavoritesRouter()
         
         let navigation = UINavigationController(rootViewController: viewController)
-        let view = navigation.childViewControllers.first as! BeersViewController
+        
+        let view = navigation.topViewController as! FavoriteBeersViewController
         
         viewController.presenter = presenter
         presenter.view = view
@@ -27,7 +29,7 @@ class BeersRouter: BeersWireframeInput {
         
         interactor.output = presenter
         
-        router.view = view
+        router.view = viewController
         
         return navigation
     }
@@ -36,4 +38,5 @@ class BeersRouter: BeersWireframeInput {
         let destinationview = DetailsRouter.assembleModule(beer)
         view?.navigationController?.pushViewController(destinationview, animated: true)
     }
+    
 }

@@ -10,7 +10,7 @@ import UIKit
 
 //Interface contract
 protocol BeersViewInterface: class {
-    func showPostData(beers: [Beer])
+    func showBeersData(beers: [Beer])
     func showEmptyState()
 }
 

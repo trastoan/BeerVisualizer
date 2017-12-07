@@ -13,10 +13,13 @@ class ApplicationTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let beersController = BeersRouter.assembleModule()
+        let favoriteBeers = FavoritesRouter.assmbleModule()
         
-        let tabBarControllers = [beersController]
+        let tabBarControllers = [beersController, favoriteBeers]
         
         self.setViewControllers(tabBarControllers, animated: true)
+        
+        favoriteBeers.tabBarItem = UITabBarItem(title: "Favorites", image: #imageLiteral(resourceName: "favoriteBeers"), tag: 2)
         beersController.tabBarItem = UITabBarItem(title: "Beers", image: #imageLiteral(resourceName: "beersTab"), tag: 1)
     }
 
