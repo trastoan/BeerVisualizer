@@ -19,6 +19,8 @@ class BeerDetailsViewController: UIViewController, DetailsView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Beer Details"
+        self.preferLargeTitles()
         presenter.viewDidLoad()
     }
     

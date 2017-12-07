@@ -32,8 +32,10 @@ class BeersViewController: UIViewController, BeersViewInterface {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 72.0
         tableView.tableFooterView = UIView()
-        
         tableView.register(BeerCell.self)
+        
+        self.navigationItem.title = "Beers"
+        self.preferLargeTitles()
     }
 
     func showPostData(beers: [Beer]) {

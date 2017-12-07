@@ -16,4 +16,11 @@ extension UIViewController {
         
         return storyboard.instantiateViewController(withIdentifier: identifier) as! T
     }
+    
+    func preferLargeTitles() {
+        if #available(iOS 11.0, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+            self.navigationItem.largeTitleDisplayMode = .always
+        }
+    }
 }
