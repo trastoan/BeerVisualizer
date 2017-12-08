@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//Creates the contract for all the modules for the Favorite view in the architecture
 //Presenter contract
 protocol FavoritesModuleInterface: class {
     func viewDidLoad()

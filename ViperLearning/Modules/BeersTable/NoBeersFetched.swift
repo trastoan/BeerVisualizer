@@ -7,9 +7,10 @@
 //
 
 import UIKit
-
+//Empty state view for fetch problems
 class NoBeersFetched: UIView, NibLoadableView, EmptyStateView {
     @IBOutlet weak var warningLabel: UILabel!
+    //Setup UI from view, including AutoLayout to center on view
     func setupOn(view: UIView, withText text: String) {
         view.addSubview(self)
         self.warningLabel.text = text

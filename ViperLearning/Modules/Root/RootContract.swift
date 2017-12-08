@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//Contract on Root
 protocol RootWireFrame: class {
     func presentTabBarController(in window: UIWindow)
 }

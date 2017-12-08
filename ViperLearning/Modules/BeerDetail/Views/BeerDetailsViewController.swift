@@ -27,7 +27,7 @@ class BeerDetailsViewController: UIViewController, DetailsView {
     override func viewWillAppear(_ animated: Bool) {
         presenter.viewDidLoad()
     }
-    
+    //Setup UI elements
     func setupView() {
         tableView = TableCreator.createTable(onView: self.view)
         tableView.dataSource = self
@@ -40,15 +40,17 @@ class BeerDetailsViewController: UIViewController, DetailsView {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "heartNotFilled"), style: .plain, target: self, action: #selector(saveToFavorite))
         self.navigationItem.title = "Beer Details"
     }
-    
+    //Set beers to be shown
     func showDetails(forBeer beer: Beer) {
         detailedBeer = beer
     }
     
+    //Save to favorites on button click
     @objc func saveToFavorite() {
         presenter.saveToFavorites()
     }
     
+    //Receive the result of the favorite transaction
     func favorited(isFavorite: Bool) {
         self.navigationItem.rightBarButtonItem?.image = isFavorite ? #imageLiteral(resourceName: "heartFilled") : #imageLiteral(resourceName: "heartNotFilled")
     }

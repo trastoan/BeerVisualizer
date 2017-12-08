@@ -10,7 +10,7 @@ import UIKit
 
 class DescriptionTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
-    
+    //Setup UI elements
     func setupView(with beer: Beer) {
         self.selectionStyle = .none
         descriptionLabel.text = beer.details

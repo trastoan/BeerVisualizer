@@ -28,10 +28,13 @@ class FavoriteBeersViewController: UIViewController, FavoritesViewInterface {
         // Do any additional setup after loading the view.
     }
     
+    /*the presenter fetch needs to be in the will appear to handle fast
+     interaction of the user when favoriting beers */
     override func viewWillAppear(_ animated: Bool) {
         presenter.viewDidLoad()
     }
     
+    //Configure the view UI
     func setupView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -45,12 +48,14 @@ class FavoriteBeersViewController: UIViewController, FavoritesViewInterface {
         self.preferLargeTitles()
     }
     
+    //Show data acquired from presenter
     func showBeersData(beers: [Beer]) {
         beersData = beers
     }
     
+    //Show empty state if error ocurred
     func showEmptyState() {
-        //TODO
+        emptyState.isHidden = false
     }
     
 }

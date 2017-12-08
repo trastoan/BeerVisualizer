@@ -10,6 +10,7 @@ import Foundation
 class FavoritesInteractor: FavoritesUseCase {
     var output: FavoritesInteractorOutput!
     
+    //Get the favorite beers saved on the RealmDB
     func fetchBeers() {
         guard let beers = Beer.all() else {
             output.beersFetchedFailed()

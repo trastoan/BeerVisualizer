@@ -9,6 +9,7 @@
 import UIKit
 
 class DetailsRouter : DetailsWireframe {
+    //Create module and connect all parts
     static func assembleModule(_ beer: Beer) -> UIViewController {
         let view: BeerDetailsViewController = BeerDetailsViewController()
         let presenter = BeerDetailsPresenter()

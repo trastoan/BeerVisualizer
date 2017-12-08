@@ -11,6 +11,7 @@ import UIKit
 class BeersRouter: BeersWireframeInput {
     var view: UIViewController?
     
+    //Assemble and connect all modules
     static func assembleModule() -> UIViewController {
         let viewController: BeersViewController = BeersViewController()
         let presenter = BeersPresenter()
@@ -32,6 +33,7 @@ class BeersRouter: BeersWireframeInput {
         return navigation
     }
     
+    //Present beer details when requested
     func presentDetailsInterfaceForBeer(beer: Beer) {
         let destinationview = DetailsRouter.assembleModule(beer)
         view?.navigationController?.pushViewController(destinationview, animated: true)

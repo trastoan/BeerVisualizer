@@ -11,6 +11,7 @@ import UIKit
 class FavoritesRouter: FavoritesWireframe {
     var view: UIViewController?
     
+    //Creates the module and connects everything
     static func assembleModule() -> UIViewController {
         let viewController: FavoriteBeersViewController = FavoriteBeersViewController()
         
@@ -34,6 +35,7 @@ class FavoritesRouter: FavoritesWireframe {
         return navigation
     }
     
+    //Show details when beer is selected
     func presentDetailsInterfaceForBeer(beer: Beer) {
         let destinationview = DetailsRouter.assembleModule(beer)
         view?.navigationController?.pushViewController(destinationview, animated: true)

@@ -20,11 +20,13 @@ protocol BeersModuleInterface: class {
     func showDetailsForBeer(beer: Beer)
 }
 
+//Use cases contract
 protocol BeersUseCase: class {
     weak var output: BeerInteractorOutput! { get set }
     func fetchBeers(page: Int)
 }
 
+//Output contract for presenter
 protocol BeerInteractorOutput: class {
     func beersFetched(beers: [Beer])
     func beersFetchedFailed()

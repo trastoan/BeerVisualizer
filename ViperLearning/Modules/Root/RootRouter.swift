@@ -8,6 +8,7 @@
 
 import UIKit
 class RootRouter: RootWireFrame {
+    //Presents the tab bar as rootView of application
     func presentTabBarController(in window: UIWindow) {
         window.makeKeyAndVisible()
         window.rootViewController = ApplicationTabBarController()
