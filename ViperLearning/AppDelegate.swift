@@ -18,8 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         RootRouter().presentTabBarController(in: window!)
-        //Configurate realm to use last schema provided
-        RealmHelper.realmConfiguration()
         return true
     }
 

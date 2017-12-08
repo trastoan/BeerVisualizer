@@ -32,8 +32,6 @@
 		DA8991EA1FD9E22900276D44 /* HeaderDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991E91FD9E22900276D44 /* HeaderDetailsTableViewCell.swift */; };
 		DA8991EC1FD9E5D500276D44 /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8991EB1FD9E5D500276D44 /* DescriptionTableViewCell.xib */; };
 		DA8991EE1FD9E63C00276D44 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991ED1FD9E63C00276D44 /* DescriptionTableViewCell.swift */; };
-		DA8991F11FDAC9FC00276D44 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991F01FDAC9FC00276D44 /* RealmHelper.swift */; };
-		DA8991FB1FDAE41A00276D44 /* LoadableContentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991FA1FDAE41A00276D44 /* LoadableContentExtension.swift */; };
 		DA8991FD1FDB00B500276D44 /* LoadableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991FC1FDB00B500276D44 /* LoadableImageView.swift */; };
 		DA8991FF1FDB079E00276D44 /* ActivityIndicatorViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991FE1FDB079E00276D44 /* ActivityIndicatorViewExtension.swift */; };
 		DACFE4D81FD6D6FA006B7FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4D71FD6D6FA006B7FD3 /* AppDelegate.swift */; };
@@ -81,8 +79,6 @@
 		DA8991E91FD9E22900276D44 /* HeaderDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		DA8991EB1FD9E5D500276D44 /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		DA8991ED1FD9E63C00276D44 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
-		DA8991F01FDAC9FC00276D44 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
-		DA8991FA1FDAE41A00276D44 /* LoadableContentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableContentExtension.swift; sourceTree = "<group>"; };
 		DA8991FC1FDB00B500276D44 /* LoadableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableImageView.swift; sourceTree = "<group>"; };
 		DA8991FE1FDB079E00276D44 /* ActivityIndicatorViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewExtension.swift; sourceTree = "<group>"; };
 		DACFE4D41FD6D6FA006B7FD3 /* ViperLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,7 +129,6 @@
 				DA89919F1FD8766500276D44 /* NibLoadableViewExtension.swift */,
 				DA8991A11FD876B100276D44 /* ReusableViewExtension.swift */,
 				DA8991A31FD87B1400276D44 /* UITableViewCell.swift */,
-				DA8991FA1FDAE41A00276D44 /* LoadableContentExtension.swift */,
 				DA8991FE1FDB079E00276D44 /* ActivityIndicatorViewExtension.swift */,
 			);
 			path = Extensions;
@@ -205,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				DA8991C61FD9DB2400276D44 /* TableCreator.swift */,
-				DA8991F01FDAC9FC00276D44 /* RealmHelper.swift */,
 				DA8991FC1FDB00B500276D44 /* LoadableImageView.swift */,
 			);
 			path = Utilities;
@@ -436,7 +430,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA8991FB1FDAE41A00276D44 /* LoadableContentExtension.swift in Sources */,
 				DA8991FF1FDB079E00276D44 /* ActivityIndicatorViewExtension.swift in Sources */,
 				DA8991BC1FD9827200276D44 /* FavoritesRouter.swift in Sources */,
 				DA8991AE1FD87E1600276D44 /* ApplicationTabBarController.swift in Sources */,
@@ -472,7 +465,6 @@
 				DA8991A81FD87C6F00276D44 /* RootContract.swift in Sources */,
 				DA8991A01FD8766500276D44 /* NibLoadableViewExtension.swift in Sources */,
 				DA89919C1FD875D400276D44 /* UITableViewExtension.swift in Sources */,
-				DA8991F11FDAC9FC00276D44 /* RealmHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
