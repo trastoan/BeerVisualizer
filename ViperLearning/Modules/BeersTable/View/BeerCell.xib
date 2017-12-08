@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="124"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kXX-DS-fc3">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kXX-DS-fc3" customClass="LoadableImageView" customModule="ViperLearning" customModuleProvider="target">
                     <rect key="frame" x="8" y="8" width="26" height="108"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="26" id="O8l-nh-ToK"/>
@@ -54,7 +54,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="beerImage" destination="kXX-DS-fc3" id="TEk-j7-wLg"/>
+                <outlet property="beerImage" destination="kXX-DS-fc3" id="e7v-sB-0jh"/>
                 <outlet property="beerTagline" destination="4NK-Ri-MFP" id="OPb-h8-Vtd"/>
                 <outlet property="beerTitleLabel" destination="rzR-zs-Wqy" id="ukP-Ay-cnd"/>
             </connections>

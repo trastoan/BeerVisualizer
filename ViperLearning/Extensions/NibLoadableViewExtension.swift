@@ -12,4 +12,12 @@ extension NibLoadableView where Self: UIView {
     static var NibName: String {
         return String(describing: self)
     }
+    
+    static func viewForNib<T: UIView>() -> T? {
+        guard let view =  Bundle.main.loadNibNamed(Self.NibName, owner: self, options: nil)?.first as? T else{
+            return nil
+        }
+        
+        return view
+    }
 }

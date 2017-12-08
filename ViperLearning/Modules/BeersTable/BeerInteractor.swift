@@ -23,7 +23,7 @@ class BeerInteractor: BeersUseCase {
                 let beers = try JSONDecoder().decode([Beer].self, from: data)
                 self.output.beersFetched(beers: beers)
             } catch  {
-                
+                self.output.beersFetchedFailed()
             }
         }
     }

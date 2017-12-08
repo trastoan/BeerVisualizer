@@ -36,7 +36,6 @@ class BeersPresenter: BeersModuleInterface, BeerInteractorOutput {
     
     func beersFetched(beers: [Beer]) {
         self.beers = beers
-        //HideActivityView
     }
     
     internal func beersFetchedFailed() {

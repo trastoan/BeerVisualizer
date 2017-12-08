@@ -12,8 +12,11 @@ class FavoriteBeersViewController: UIViewController, FavoritesViewInterface {
 
     var tableView: UITableView!
     var presenter: FavoritesPresenter!
+    var emptyState = NoBeersFetched.viewForNib() as! NoBeersFetched
+    
     var beersData: [Beer] = [Beer]() {
         didSet {
+            emptyState.isHidden = beersData.count > 0
             tableView.reloadData()
         }
     }
@@ -36,6 +39,7 @@ class FavoriteBeersViewController: UIViewController, FavoritesViewInterface {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 124.0
         tableView.register(BeerCell.self)
+        emptyState.setupOn(view: self.view, withText: "No favorites to show")
         
         self.navigationItem.title = "Favorite Beers"
         self.preferLargeTitles()

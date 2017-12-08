@@ -6,8 +6,12 @@
 //  Copyright © 2017 ExpressU. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol ReusableView: class {}
 
-protocol NibLoadableView: class { }
+protocol NibLoadableView: class {}
+
+protocol EmptyStateView: class {
+    func setupOn(view: UIView, withText text: String)
+}

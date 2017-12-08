@@ -11,16 +11,22 @@ import Nuke
 import UIKit
 
 class BeerCell : UITableViewCell {
-    @IBOutlet weak var beerImage: UIImageView!
+    @IBOutlet weak var beerImage: LoadableImageView!
     @IBOutlet weak var beerTitleLabel: UILabel!
     @IBOutlet weak var beerTagline: UILabel!
     
     func setup(_ beer: Beer) {
-        beerImage.image = #imageLiteral(resourceName: "largeBeer")
+        beerImage.image = #imageLiteral(resourceName: "emptyBeer")
         beerTitleLabel.text = beer.name
         beerTagline.text = beer.tagline
         guard let urlString = beer.imageURL else { return }
         guard let url = URL(string: urlString) else { return }
-        Nuke.loadImage(with: url, into: beerImage)
+        beerImage.activityIndicator.startAnimating()
+        Manager.shared.loadImage(with: url) { (resultImage) in
+            if let image = resultImage.value {
+                self.beerImage.image = image
+                self.beerImage.activityIndicator.stopAnimating()
+            }
+        }
     }
 }

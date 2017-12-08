@@ -9,21 +9,23 @@
 import UIKit
 
 class BeersViewController: UIViewController, BeersViewInterface {
-
+    
     var tableView: UITableView!
     var presenter: BeersPresenter!
+    var activityIndicator = UIActivityIndicatorView()
+    var emptyState = NoBeersFetched.viewForNib() as! NoBeersFetched
     var beersData = [Beer]() {
         didSet {
             tableView.reloadData()
         }
     }
     var pageNumber = 1
-    var isDataLoading = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView = TableCreator.createTable(onView: self.view)
         setupView()
+        activityIndicator.startAnimating()
         presenter.updateView()
     }
     
@@ -34,17 +36,22 @@ class BeersViewController: UIViewController, BeersViewInterface {
         tableView.estimatedRowHeight = 124.0
         tableView.tableFooterView = UIView()
         tableView.register(BeerCell.self)
+        emptyState.setupOn(view: self.view, withText: "Couldn't fetch your beers")
+        emptyState.isHidden = true
+        activityIndicator.setupOn(view: self.view)
         
         self.navigationItem.title = "Beers"
         self.preferLargeTitles()
     }
 
     func showBeersData(beers: [Beer]) {
+        activityIndicator.stopAnimating()
         beersData = beers
     }
     
     func showEmptyState() {
-        //Show empty screen
+        activityIndicator.stopAnimating()
+        emptyState.isHidden = false
     }
 }
 
@@ -63,9 +70,4 @@ extension BeersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.showDetailsForBeer(beer: beersData[indexPath.row])
     }
-    
-//    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-//        pageNumber += 1
-//        presenter.getMoreBeers(page: pageNumber)
-//    }
 }

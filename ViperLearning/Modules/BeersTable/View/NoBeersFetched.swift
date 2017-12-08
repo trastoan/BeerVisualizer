@@ -8,4 +8,15 @@
 
 import UIKit
 
-class NoBeersFetched: UIView, NibLoadableView { }
+class NoBeersFetched: UIView, NibLoadableView, EmptyStateView {
+    @IBOutlet weak var warningLabel: UILabel!
+    func setupOn(view: UIView, withText text: String) {
+        view.addSubview(self)
+        self.warningLabel.text = text
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        self.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        self.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        self.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    }
+}
