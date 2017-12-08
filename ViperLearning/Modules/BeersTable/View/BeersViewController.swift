@@ -19,6 +19,7 @@ class BeersViewController: UIViewController, BeersViewInterface {
             tableView.reloadData()
         }
     }
+    var didReachEnd = false
     var pageNumber = 1
     
     override func viewDidLoad() {
@@ -46,12 +47,16 @@ class BeersViewController: UIViewController, BeersViewInterface {
 
     func showBeersData(beers: [Beer]) {
         activityIndicator.stopAnimating()
-        beersData = beers
+        beersData.append(contentsOf: beers)
     }
     
     func showEmptyState() {
         activityIndicator.stopAnimating()
-        emptyState.isHidden = false
+        if beersData.count < 1 {
+            emptyState.isHidden = false
+        } else {
+            didReachEnd = true
+        }
     }
 }
 
@@ -65,6 +70,13 @@ extension BeersViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setup(beersData[indexPath.row])
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == beersData.count - 3 && !didReachEnd{
+            pageNumber += 1
+            presenter.getMoreBeers(page: pageNumber)
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -22,12 +22,10 @@ class BeersPresenter: BeersModuleInterface, BeerInteractorOutput {
     
     func updateView() {
         interactor.fetchBeers(page: 1)
-        //Show activity indicator
     }
     
     func getMoreBeers(page: Int) {
         interactor.fetchBeers(page: page)
-        //Needs to refactor to append instead then override beers
     }
     
     func showDetailsForBeer(beer: Beer) {
@@ -40,6 +38,5 @@ class BeersPresenter: BeersModuleInterface, BeerInteractorOutput {
     
     internal func beersFetchedFailed() {
         view?.showEmptyState()
-        //HideActivity
     }
 }
