@@ -17,13 +17,15 @@ class BeerCell: UITableViewCell {
     //Setup cell UI elements with Beer object
     func setup(_ beer: Beer) {
         self.accessoryType = .disclosureIndicator
-        beerImage.image = #imageLiteral(resourceName: "emptyBeer")
         beerTitleLabel.text = beer.name
         beerTagline.text = beer.tagline
         guard let urlString = beer.imageURL else { return }
         guard let url = URL(string: urlString) else { return }
         beerImage.activityIndicator.startAnimating()
-        beerImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (_, _, _, _) in
+        beerImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (_, error, _, _) in
+            if error != nil {
+                self.beerImage.image = #imageLiteral(resourceName: "emptyBeer")
+            }
             self.beerImage.activityIndicator.stopAnimating()
         }
     }
