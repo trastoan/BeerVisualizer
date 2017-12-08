@@ -12,5 +12,4 @@ protocol RealModel {
     func save() -> Error?
     func delete() -> Error?
     static func all() -> [Self]?
-    func update() -> Error?
 }

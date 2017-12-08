@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//Helps to setup activity indicator on view with autolayout
 extension UIActivityIndicatorView {
     func setupOn(view: UIView, x: CGFloat = 0.0, y: CGFloat = 0.0) {
         view.addSubview(self)

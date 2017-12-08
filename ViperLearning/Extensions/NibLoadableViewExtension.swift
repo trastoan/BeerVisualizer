@@ -13,6 +13,7 @@ extension NibLoadableView where Self: UIView {
         return String(describing: self)
     }
     
+    //Load view from nib using class reference
     static func viewForNib<T: UIView>() -> T? {
         guard let view =  Bundle.main.loadNibNamed(Self.NibName, owner: self, options: nil)?.first as? T else{
             return nil
