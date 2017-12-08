@@ -16,7 +16,11 @@ class BeerDetailsPresenter: DetailsPresentation, DetailsInteractorOutput {
     
     func viewDidLoad() {
         view?.showDetails(forBeer: beer)
-        view?.favorited(isFavorite: Beer.find(with: beer.id) != nil ? true : false)
+        guard let existsOnDB = Beer.find(with: beer.id) else {
+            view?.favorited(isFavorite: false)
+            return
+        }
+        view?.favorited(isFavorite: !existsOnDB.shouldBeDeleted)
     }
     
     func favorited(isFavorite: Bool) {

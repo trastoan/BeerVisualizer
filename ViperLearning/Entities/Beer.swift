@@ -16,6 +16,7 @@ final class Beer: Object, Decodable, NSCopying {
     @objc dynamic var tagline: String?
     @objc dynamic var details: String?
     @objc dynamic var imageURL: String?
+    @objc dynamic var shouldBeDeleted: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case imageURL = "image_url"
@@ -59,7 +60,33 @@ extension Beer : RealModel {
         do {
             let realm = try Realm()
             try realm.write {
-                realm.delete(self)
+                self.shouldBeDeleted = !self.shouldBeDeleted
+                realm.add(self, update: true)
+            }
+            return nil
+        } catch let error {
+            return error
+        }
+    }
+    
+    static func batchDelete() -> Error? {
+        do {
+            let realm = try Realm()
+            let objects = realm.objects(self).filter("shouldBeDeleted = true")
+            try realm.write {
+                realm.delete(objects)
+            }
+            return nil
+        } catch let error {
+            return error
+        }
+    }
+    
+    func update() -> Error? {
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.add(self, update: true)
             }
             return nil
         } catch let error {
@@ -70,7 +97,7 @@ extension Beer : RealModel {
     static func all() -> [Beer]? {
         do {
             let realm = try Realm()
-            return Array(realm.objects(self))
+            return Array(realm.objects(self).filter("shouldBeDeleted = false"))
         } catch {
             return nil
         }

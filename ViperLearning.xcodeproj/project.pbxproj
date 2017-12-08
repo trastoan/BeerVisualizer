@@ -32,6 +32,7 @@
 		DA8991EA1FD9E22900276D44 /* HeaderDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991E91FD9E22900276D44 /* HeaderDetailsTableViewCell.swift */; };
 		DA8991EC1FD9E5D500276D44 /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8991EB1FD9E5D500276D44 /* DescriptionTableViewCell.xib */; };
 		DA8991EE1FD9E63C00276D44 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991ED1FD9E63C00276D44 /* DescriptionTableViewCell.swift */; };
+		DA8991F11FDAC9FC00276D44 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991F01FDAC9FC00276D44 /* RealmHelper.swift */; };
 		DACFE4D81FD6D6FA006B7FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFE4D71FD6D6FA006B7FD3 /* AppDelegate.swift */; };
 		DACFE4DF1FD6D6FA006B7FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACFE4DE1FD6D6FA006B7FD3 /* Assets.xcassets */; };
 		DACFE4E21FD6D6FA006B7FD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACFE4E01FD6D6FA006B7FD3 /* LaunchScreen.storyboard */; };
@@ -77,6 +78,7 @@
 		DA8991E91FD9E22900276D44 /* HeaderDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		DA8991EB1FD9E5D500276D44 /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		DA8991ED1FD9E63C00276D44 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		DA8991F01FDAC9FC00276D44 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		DACFE4D41FD6D6FA006B7FD3 /* ViperLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACFE4D71FD6D6FA006B7FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACFE4DE1FD6D6FA006B7FD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -191,6 +193,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DA8991EF1FD9E89A00276D44 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DA8991C61FD9DB2400276D44 /* TableCreator.swift */,
+				DA8991F01FDAC9FC00276D44 /* RealmHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		DACFE4CB1FD6D6F9006B7FD3 = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +223,7 @@
 		DACFE4D61FD6D6FA006B7FD3 /* ViperLearning */ = {
 			isa = PBXGroup;
 			children = (
+				DA8991EF1FD9E89A00276D44 /* Utilities */,
 				DA8991BF1FD9AE3300276D44 /* Protocols */,
 				DA8991A51FD87C2E00276D44 /* Modules */,
 				DA89919A1FD875B900276D44 /* Extensions */,
@@ -220,7 +232,6 @@
 				DACFE4DE1FD6D6FA006B7FD3 /* Assets.xcassets */,
 				DACFE4E01FD6D6FA006B7FD3 /* LaunchScreen.storyboard */,
 				DACFE4E31FD6D6FA006B7FD3 /* Info.plist */,
-				DA8991C61FD9DB2400276D44 /* TableCreator.swift */,
 			);
 			path = ViperLearning;
 			sourceTree = "<group>";
@@ -449,6 +460,7 @@
 				DA8991A81FD87C6F00276D44 /* RootContract.swift in Sources */,
 				DA8991A01FD8766500276D44 /* NibLoadableViewExtension.swift in Sources */,
 				DA89919C1FD875D400276D44 /* UITableViewExtension.swift in Sources */,
+				DA8991F11FDAC9FC00276D44 /* RealmHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
