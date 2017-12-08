@@ -33,7 +33,7 @@ final class Beer: Object, Decodable {
 }
 
 //Realm interactions
-extension Beer : RealModel {
+extension Beer: RealModel {
     
     func save() -> Error? {
         do {

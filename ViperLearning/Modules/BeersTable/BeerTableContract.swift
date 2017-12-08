@@ -44,4 +44,3 @@ protocol BeersWireframeInput {
 protocol BeerInteractorInput: class {
     func fetchBeers(page: Int)
 }
-

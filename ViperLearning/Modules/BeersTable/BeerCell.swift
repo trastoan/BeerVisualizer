@@ -10,7 +10,7 @@ import Foundation
 import Nuke
 import UIKit
 
-class BeerCell : UITableViewCell {
+class BeerCell: UITableViewCell {
     @IBOutlet weak var beerImage: LoadableImageView!
     @IBOutlet weak var beerTitleLabel: UILabel!
     @IBOutlet weak var beerTagline: UILabel!

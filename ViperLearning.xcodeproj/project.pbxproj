@@ -523,7 +523,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViperLearning/Pods-ViperLearning-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViperLearning/Pods-ViperLearning-frameworks.sh\"";
 			showEnvVarsInLog = 0;
 		};
 		26977520DE24C38ECDB3480C /* [CP] Check Pods Manifest.lock */ = {

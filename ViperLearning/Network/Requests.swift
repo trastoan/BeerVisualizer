@@ -23,7 +23,7 @@ struct PunkRequests {
                 DispatchQueue.main.async {
                     completion(beers)
                 }
-            } catch  {
+            } catch {
                 DispatchQueue.main.async {
                     completion(nil)
                 }

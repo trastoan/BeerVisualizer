@@ -74,8 +74,9 @@ extension BeersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        //Must check if its displaying the last cells so it can fetch new data, if all data has been fetched, stop trying to fetch more
-        if indexPath.row == beersData.count - 3 && !didReachEnd{
+        /*Must check if its displaying the last cells so it can fetch new data, if all data has been fetched,
+        stop trying to fetch more*/
+        if indexPath.row == beersData.count - 3 && !didReachEnd {
             pageNumber += 1
             presenter.getMoreBeers(page: pageNumber)
         }
