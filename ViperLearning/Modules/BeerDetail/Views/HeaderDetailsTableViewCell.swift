@@ -16,6 +16,7 @@ class HeaderDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var taglineLabel: UILabel!
     
     func setupCell(with beer: Beer) {
+        self.selectionStyle = .none
         nameLabel.text = beer.name
         taglineLabel.text = beer.tagline
         guard let urlString = beer.imageURL else { return }

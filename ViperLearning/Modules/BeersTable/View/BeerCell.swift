@@ -16,6 +16,7 @@ class BeerCell : UITableViewCell {
     @IBOutlet weak var beerTagline: UILabel!
     
     func setup(_ beer: Beer) {
+        self.accessoryType = .disclosureIndicator
         beerImage.image = #imageLiteral(resourceName: "emptyBeer")
         beerTitleLabel.text = beer.name
         beerTagline.text = beer.tagline

@@ -16,7 +16,7 @@ class BeersPresenter: BeersModuleInterface, BeerInteractorOutput {
     
     var beers = [Beer]() {
         didSet {
-            beers.count > 0 ? view?.showBeersData(beers: beers) : view?.showEmptyState()
+            beers.count > 0 ? view?.showBeersData(beers: beers) : view?.nothingToFetch()
         }
     }
     
@@ -37,6 +37,6 @@ class BeersPresenter: BeersModuleInterface, BeerInteractorOutput {
     }
     
     internal func beersFetchedFailed() {
-        view?.showEmptyState()
+        view?.nothingToFetch()
     }
 }

@@ -11,7 +11,7 @@ import UIKit
 //Interface contract
 protocol BeersViewInterface: class {
     func showBeersData(beers: [Beer])
-    func showEmptyState()
+    func nothingToFetch()
 }
 
 //Presenter contract

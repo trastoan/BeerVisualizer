@@ -50,7 +50,8 @@ class BeersViewController: UIViewController, BeersViewInterface {
         beersData.append(contentsOf: beers)
     }
     
-    func showEmptyState() {
+    //Show empty state only when beers count < 1
+    func nothingToFetch() {
         activityIndicator.stopAnimating()
         if beersData.count < 1 {
             emptyState.isHidden = false
@@ -73,6 +74,7 @@ extension BeersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        //Must check if its displaying the last cells so it can fetch new data, if all data has been fetched, stop trying to fetch more
         if indexPath.row == beersData.count - 3 && !didReachEnd{
             pageNumber += 1
             presenter.getMoreBeers(page: pageNumber)
@@ -81,5 +83,6 @@ extension BeersViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.showDetailsForBeer(beer: beersData[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
