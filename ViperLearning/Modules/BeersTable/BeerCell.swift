@@ -6,9 +6,8 @@
 //  Copyright © 2017 ExpressU. All rights reserved.
 //
 
-import Foundation
-import Nuke
 import UIKit
+import Kingfisher
 
 class BeerCell: UITableViewCell {
     @IBOutlet weak var beerImage: LoadableImageView!
@@ -24,11 +23,8 @@ class BeerCell: UITableViewCell {
         guard let urlString = beer.imageURL else { return }
         guard let url = URL(string: urlString) else { return }
         beerImage.activityIndicator.startAnimating()
-        Manager.shared.loadImage(with: url) { (resultImage) in
-            if let image = resultImage.value {
-                self.beerImage.image = image
-                self.beerImage.activityIndicator.stopAnimating()
-            }
+        beerImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (_, _, _, _) in
+            self.beerImage.activityIndicator.stopAnimating()
         }
     }
 }

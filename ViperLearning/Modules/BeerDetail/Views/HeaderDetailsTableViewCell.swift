@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Nuke
+import Kingfisher
 
 class HeaderDetailsTableViewCell: UITableViewCell {
 
@@ -23,12 +23,7 @@ class HeaderDetailsTableViewCell: UITableViewCell {
         guard let urlString = beer.imageURL else { return }
         guard let url = URL(string: urlString) else { return }
         beerImageView.activityIndicator.startAnimating()
-        Manager.shared.loadImage(with: url) { (resultImage) in
-            guard let image = resultImage.value else {
-                self.beerImageView.image = #imageLiteral(resourceName: "emptyBeer")
-                return
-            }
-            self.beerImageView.image = image
+        beerImageView.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (_, _, _, _) in
             self.beerImageView.activityIndicator.stopAnimating()
         }
     }

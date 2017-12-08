@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43A228D220803D33885ED7D0 /* Pods_ViperLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3D4D9D6CE06DD57B0AD14E /* Pods_ViperLearning.framework */; };
+		8AF374A37EADFA8855E18467 /* Pods_ViperLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D662469EDFF5E8EF198583 /* Pods_ViperLearning.framework */; };
 		DA8991991FD873E400276D44 /* BeerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA8991981FD873E400276D44 /* BeerCell.xib */; };
 		DA89919C1FD875D400276D44 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA89919B1FD875D400276D44 /* UITableViewExtension.swift */; };
 		DA89919E1FD8761200276D44 /* ViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA89919D1FD8761200276D44 /* ViewProtocols.swift */; };
@@ -52,9 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		57C0BAF981E286941F3A047D /* Pods-ViperLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperLearning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViperLearning/Pods-ViperLearning.debug.xcconfig"; sourceTree = "<group>"; };
-		5C3D4D9D6CE06DD57B0AD14E /* Pods_ViperLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8523BD54F7D742CDA9586A75 /* Pods-ViperLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperLearning.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViperLearning/Pods-ViperLearning.release.xcconfig"; sourceTree = "<group>"; };
+		6611A223BD33EEF8992358E1 /* Pods-ViperLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperLearning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViperLearning/Pods-ViperLearning.debug.xcconfig"; sourceTree = "<group>"; };
+		89D662469EDFF5E8EF198583 /* Pods_ViperLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8991981FD873E400276D44 /* BeerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCell.xib; sourceTree = "<group>"; };
 		DA89919B1FD875D400276D44 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		DA89919D1FD8761200276D44 /* ViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocols.swift; sourceTree = "<group>"; };
@@ -98,6 +97,7 @@
 		DACFE4FF1FD70AF7006B7FD3 /* BeerTableContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableContract.swift; sourceTree = "<group>"; };
 		DACFE5021FD71A8F006B7FD3 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		DACFE5041FD7218E006B7FD3 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
+		F6C2D3A96B02417F62496E7C /* Pods-ViperLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperLearning.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViperLearning/Pods-ViperLearning.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,20 +105,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43A228D220803D33885ED7D0 /* Pods_ViperLearning.framework in Frameworks */,
+				8AF374A37EADFA8855E18467 /* Pods_ViperLearning.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B58A06D8AA742D87EF5F4318 /* Pods */ = {
+		A8CD57CC2F06FCD1FCD23B7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				57C0BAF981E286941F3A047D /* Pods-ViperLearning.debug.xcconfig */,
-				8523BD54F7D742CDA9586A75 /* Pods-ViperLearning.release.xcconfig */,
+				89D662469EDFF5E8EF198583 /* Pods_ViperLearning.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DA89919A1FD875B900276D44 /* Extensions */ = {
@@ -358,8 +357,8 @@
 			children = (
 				DACFE4D61FD6D6FA006B7FD3 /* ViperLearning */,
 				DACFE4D51FD6D6FA006B7FD3 /* Products */,
-				B58A06D8AA742D87EF5F4318 /* Pods */,
-				F8DE07DCB1C9929FB91C0B48 /* Frameworks */,
+				F2C2B64C0534CA01939F61A3 /* Pods */,
+				A8CD57CC2F06FCD1FCD23B7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -420,12 +419,13 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		F8DE07DCB1C9929FB91C0B48 /* Frameworks */ = {
+		F2C2B64C0534CA01939F61A3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5C3D4D9D6CE06DD57B0AD14E /* Pods_ViperLearning.framework */,
+				6611A223BD33EEF8992358E1 /* Pods-ViperLearning.debug.xcconfig */,
+				F6C2D3A96B02417F62496E7C /* Pods-ViperLearning.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,12 +435,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DACFE4E61FD6D6FA006B7FD3 /* Build configuration list for PBXNativeTarget "ViperLearning" */;
 			buildPhases = (
-				26977520DE24C38ECDB3480C /* [CP] Check Pods Manifest.lock */,
+				7B7C565C84736AE83324476D /* [CP] Check Pods Manifest.lock */,
 				DACFE4D01FD6D6FA006B7FD3 /* Sources */,
 				DACFE4D11FD6D6FA006B7FD3 /* Frameworks */,
 				DACFE4D21FD6D6FA006B7FD3 /* Resources */,
-				15C83E99BBDECF5F44EC36B1 /* [CP] Embed Pods Frameworks */,
-				76E08714F745573C39ACA1AA /* [CP] Copy Pods Resources */,
+				183390A78A92DE9D3E258B3C /* [CP] Embed Pods Frameworks */,
+				FECC68CB82DA6C2F3A1AD8E7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -502,7 +502,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15C83E99BBDECF5F44EC36B1 /* [CP] Embed Pods Frameworks */ = {
+		183390A78A92DE9D3E258B3C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -510,23 +510,23 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ViperLearning/Pods-ViperLearning-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViperLearning/Pods-ViperLearning-frameworks.sh\"";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViperLearning/Pods-ViperLearning-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		26977520DE24C38ECDB3480C /* [CP] Check Pods Manifest.lock */ = {
+		7B7C565C84736AE83324476D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -544,7 +544,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		76E08714F745573C39ACA1AA /* [CP] Copy Pods Resources */ = {
+		FECC68CB82DA6C2F3A1AD8E7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -727,7 +727,7 @@
 		};
 		DACFE4E71FD6D6FA006B7FD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57C0BAF981E286941F3A047D /* Pods-ViperLearning.debug.xcconfig */;
+			baseConfigurationReference = 6611A223BD33EEF8992358E1 /* Pods-ViperLearning.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -743,7 +743,7 @@
 		};
 		DACFE4E81FD6D6FA006B7FD3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8523BD54F7D742CDA9586A75 /* Pods-ViperLearning.release.xcconfig */;
+			baseConfigurationReference = F6C2D3A96B02417F62496E7C /* Pods-ViperLearning.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
