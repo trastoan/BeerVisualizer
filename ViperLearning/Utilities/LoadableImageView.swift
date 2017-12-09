@@ -12,6 +12,6 @@ class LoadableImageView: UIImageView {
     var activityIndicator = UIActivityIndicatorView()
     
     override func awakeFromNib() {
-        activityIndicator.setupOn(view: self, yFromCenter: 15)
+        activityIndicator.setupOn(view: self)
     }
 }

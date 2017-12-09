@@ -22,10 +22,7 @@ class BeerCell: UITableViewCell {
         guard let urlString = beer.imageURL else { return }
         guard let url = URL(string: urlString) else { return }
         beerImage.activityIndicator.startAnimating()
-        beerImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (_, error, _, _) in
-            if error != nil {
-                self.beerImage.image = #imageLiteral(resourceName: "emptyBeer")
-            }
+        beerImage.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "emptyBeer"), options: nil, progressBlock: nil) { (_, _, _, _) in
             self.beerImage.activityIndicator.stopAnimating()
         }
     }

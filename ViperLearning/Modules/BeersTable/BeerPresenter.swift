@@ -21,7 +21,7 @@ class BeersPresenter: BeersModuleInterface, BeerInteractorOutput {
     }
     
     //Request data to interactor for the firs time
-    func updateView() {
+    @objc func updateView() {
         interactor.fetchBeers(page: 1)
     }
     

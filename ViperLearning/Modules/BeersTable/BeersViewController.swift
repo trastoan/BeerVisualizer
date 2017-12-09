@@ -37,17 +37,27 @@ class BeersViewController: UIViewController, BeersViewInterface {
         tableView.estimatedRowHeight = 124.0
         tableView.tableFooterView = UIView()
         tableView.register(BeerCell.self)
+        
         emptyState.setupOn(view: self.view, withText: "Couldn't fetch your beers")
         emptyState.isHidden = true
         activityIndicator.setupOn(view: self.view)
         
         self.navigationItem.title = "Beers"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(BeersViewController.refreshData))
+
         self.preferLargeTitles()
     }
 
     func showBeersData(beers: [Beer]) {
         activityIndicator.stopAnimating()
         beersData.append(contentsOf: beers)
+    }
+    
+    @objc func refreshData() {
+        beersData = []
+        emptyState.isHidden = true
+        activityIndicator.startAnimating()
+        presenter.updateView()
     }
     
     //Show empty state only when beers count < 1
@@ -68,7 +78,7 @@ extension BeersViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as BeerCell
-        cell.setup(beersData[indexPath.row])
+//        cell.setup(beersData[indexPath.row])
         
         return cell
     }
@@ -76,6 +86,12 @@ extension BeersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         /*Must check if its displaying the last cells so it can fetch new data, if all data has been fetched,
         stop trying to fetch more*/
+        guard let cell = cell as? BeerCell else {
+            return
+        }
+        
+        cell.setup(beersData[indexPath.row])
+        
         if indexPath.row == beersData.count - 3 && !didReachEnd {
             pageNumber += 1
             presenter.getMoreBeers(page: pageNumber)

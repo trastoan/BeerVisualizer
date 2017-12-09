@@ -12,6 +12,7 @@ class ApplicationTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //Creates de modules for each tab
         let beersController = BeersRouter.assembleModule()
         let favoriteBeers = FavoritesRouter.assembleModule()
